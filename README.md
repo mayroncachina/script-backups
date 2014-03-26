@@ -30,6 +30,5 @@ Note that Xcode is a pre-req for Homebrew
 
 ## Set shell to ZSH and install oh-my-zsh
     brew install wget
-    wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-restart iTerm2
+    wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh restart iTerm2
 
