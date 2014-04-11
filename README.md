@@ -32,3 +32,21 @@ Note that Xcode is a pre-req for Homebrew
     brew install wget
     wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh restart iTerm2
 
+
+
+
+
+## TMUX: Auto start on shell start
+
+```sh
+
+ # If you don't do this, your (graphical) login sessions will hang
+ [[ $- != *i* ]] && return
+ 
+ # If we are not yet in a screen session
+ if [[ $TERM != screen* ]]; then
+   # Start tmux if there is no panicfile and tmux actually exists.
+   [ ! -f /tmp/panic -a -x /usr/bin/tmux ] && exec tmux
+ fi
+ 
+```
